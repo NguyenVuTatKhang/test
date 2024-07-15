@@ -53,6 +53,10 @@ Tạo ra một giao diện trên Telegram dựa theo hướng của anh Danh đ�
 
 ![ảnh](anh2.jpg)
 
+Với phần ảnh sẽ dựa theo phần anh Danh đã hòan thiện, nhưng em dự tính thêm phần nhiệt độ ngoài trời vào.
+
+Còn các nút bấm em sẽ sử dụng thư viện UniversalTelegramBot để khởi tạo thêm và liên kết được với phần trên, sao cho các nút bấm sẽ luôn ở bên dưới ảnh.
+
 ## Công việc tiếp theo:
 
 + Cho em xin ý kiến từ thầy ạ.
