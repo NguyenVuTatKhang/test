@@ -16,9 +16,9 @@ Tên đề tài: " Nghiên cứu, thiết kế giao diện người dùng dựa 
 
 + Chatbot tương tác với con người qua âm thanh hoặc văn bản và sử dụng các platform để giao tiếp với bot. 
    Phần mà các lập trình viên cần phát triển nằm toàn bộ ở phía sau bao gồm:
-•	Translator: Dịch yêu cầu của user, giúp máy tính hiểu được yêu cầu mình cần thực hiện → quyết định việc chatbot có thông minh hay không.
-•	Processor: Xử lý yêu cầu, thành phần này giúp khả năng của chatbot không bị giới hạn, máy tính làm được gì thì chatbot cũng làm được như vậy.
-•	Respondent: Nhận output và đóng gói gửi trả lại messenger platform, trả lại cho người dùng kết quả.
+- Translator: Dịch yêu cầu của user, giúp máy tính hiểu được yêu cầu mình cần thực hiện → quyết định việc chatbot có thông minh hay không.
+- Processor: Xử lý yêu cầu, thành phần này giúp khả năng của chatbot không bị giới hạn, máy tính làm được gì thì chatbot cũng làm được như vậy.
+- Respondent: Nhận output và đóng gói gửi trả lại messenger platform, trả lại cho người dùng kết quả.
 
 + Em đã tìm hiểu code về Telegram chatbot qua: 
 
@@ -44,8 +44,7 @@ Hàm sửa ảnh sẽ sử dụng phương thức editMessageMedia cung cấp b�
 
 2. Ý tưởng về đề tài:
 
-+ Trước hết, theo em đã tìm hiểu giao diện người dùng là tất cả những thành phần mà người dùng tương tác trực tiếp trong một sản phẩm hoặc ứng dụng. 
-Do đó, em có ý tưởng là: 
+Sau khi tìm hiểu về giao diện người dùng và telegram chatbot, em có ý tưởng là: 
 
 Tạo ra một giao diện trên Telegram dựa theo hướng của anh Danh đã làm là gửi và chỉnh sửa ảnh, nhưng sẽ cải thiện bằng cách bổ sung thêm những phần để tương tác nữa.
 
@@ -56,6 +55,10 @@ Tạo ra một giao diện trên Telegram dựa theo hướng của anh Danh đ�
 Với phần ảnh sẽ dựa theo phần anh Danh đã hòan thiện, nhưng em dự tính thêm phần nhiệt độ ngoài trời vào.
 
 Còn các nút bấm em sẽ sử dụng thư viện UniversalTelegramBot để khởi tạo thêm và liên kết được với phần trên, sao cho các nút bấm sẽ luôn ở bên dưới ảnh.
+
++ Ví dụ minh họa giao diện dựa theo ý tưởng:
+
+![ảnh](anh3.jpg)
 
 ## Công việc tiếp theo:
 
