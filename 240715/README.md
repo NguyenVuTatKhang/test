@@ -1,29 +1,30 @@
 # Báo cáo công việc ngày 15/07/2024
 
-# Chủ đề:  Nghiên cứu, thiết kế giao diện người dùng dựa trên Telegram Chat bot
+# Đề tài được nhận:
+Tên đề tài: " Nghiên cứu, thiết kế giao diện người dùng dựa trên Telegram Chat bot "
 
 ## Đã tìm hiểu được:
 
-1. Cách hoạt động của telegram chat bot và cách vận hành của hệ thống
+1. Cách hoạt động của telegram chat bot.
 
-+ Telegram chatbot là một chương trình tương tác với người dùng thông qua giao diện telagram.
 
-Ảnh minh họa cách hoạt động:
++ Theo em hiểu chatbot là một chương trình máy tính tương tác với người dùng bằng ngôn ngữ tự nhiên dưới một giao diện đơn giản, âm thanh hoặc dưới dạng tin nhắn.
+
++ Về cách hoạt động của chatbot có hình ảnh minh họa sau:
+
 ![ảnh](pic.png)
 
-+ Telegram chatbot có thể vận hành qua mã api bằng lập trình nhúng.
++ Chatbot tương tác với con người qua âm thanh hoặc văn bản và sử dụng các platform để giao tiếp với bot. 
+   Phần mà các lập trình viên cần phát triển nằm toàn bộ ở phía sau bao gồm:
+•	Translator: Dịch yêu cầu của user, giúp máy tính hiểu được yêu cầu mình cần thực hiện → quyết định việc chatbot có thông minh hay không.
+•	Processor: Xử lý yêu cầu, thành phần này giúp khả năng của chatbot không bị giới hạn, máy tính làm được gì thì chatbot cũng làm được như vậy.
+•	Respondent: Nhận output và đóng gói gửi trả lại messenger platform, trả lại cho người dùng kết quả.
 
-+ Link code tìm hiểu về lập trình nhúng Telegram chatbot: 
++ Em đã tìm hiểu code về Telegram chatbot qua: 
 
 https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot/
 
-2. Cách vận hành cơ bản của API:
-
-+ API là giao diện lập trình ứng dụng, có thể sử dụng nó để truy xuất đến một tập hàm đang dùng và trao đổi dữ liệu giữa các ứng dụng.
-
-3. Hướng triển khai đề tài:
-
-+ Sử dụng Esp32 để người dùng truy xuất dữ liệu cần thiết với API của web và kiểm soát phần cứng.
+Trong link trên là về thư viện UniversalTelegramBot, thư viện này giúp cho người dùng việc khởi tạo bot của telegram dễ dàng hơn.
 
 ## Đã làm được:
 
@@ -31,47 +32,26 @@ https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot/
 
 ![ảnh](anh.jpg)
 
++ Phần của anh Danh đã làm là tạo giao diện từ telegram chat bot sử dụng để gửi và chỉnh sửa ảnh. 
+
++ Cụ thể: anh Danh khởi tạo một bot chat và tạo ra 3 loại hàm gửi ảnh, tạo ảnh và sửa ảnh. Trong đó:
+
+Hàm tạo ảnh sẽ tạo một đường dẫn tới trang quickchart để thực hiện yêu cầu tạo ảnh.
+
+Hàm gửi ảnh sẽ gửi ảnh đã tạo qua trang thức HTPT bằng cách nhận phản hồi từ telegram chat bot.
+
+Hàm sửa ảnh sẽ sử dụng phương thức editMessageMedia cung cấp bởi API Telegram giúp sửa ảnh bot đã gửi.
+
 2. Ý tưởng về đề tài:
 
-+ Sử dụng Esp32, dht22 và đèn led để làm đề tài:
++ Trước hết, theo em đã tìm hiểu giao diện người dùng là tất cả những thành phần mà người dùng tương tác trực tiếp trong một sản phẩm hoặc ứng dụng. 
+Do đó, em có ý tưởng là: 
 
-Cụ thể: Esp32 sẽ lấy dữ liệu từ dht22 và dữ liệu thời tiết trên web để so sánh, sau đó xử lý ra kết quả để điều khiển đèn led cảnh báo.
+Tạo ra một giao diện trên Telegram dựa theo hướng của anh Danh đã làm là gửi và chỉnh sửa ảnh, nhưng sẽ cải thiện bằng cách bổ sung thêm những phần để tương tác nữa.
 
-+ Esp32 lấy dữ liệu từ dht22 đã tìm hiểu qua anh Danh.
++ Theo ý tưởng của em, em sẽ tạo ra một giao diện dựa trên sơ đồ sau:
 
-+ Esp32 lấy dữ liệu trên trang web:
-
-link tham khảo: https://youtu.be/tD66nwc7-dI?si=_15g3h6ua2dzt9et
-
-Đã thay đổi đoạn code sau để phù hợp với đề tài.
-
-Code mẫu:
-
-```
-void filter(){
-  DynamicJsonBuffer jsonBuffer(AW_line.length() + 1);
-  JsonObject & root = jsonBuffer.parseObject(txt);
-  float temp_max = root["DailyForecasts"] [0] ["Temperature"] ["Maximum"] ["Value"];
-  float temp_min = root["DailyForecasts"] [0] ["Temperature"] ["Minimum"] ["Value"];
-  String wea= root["DailyForecasts"] [0] ["Day"] ["IconPhrase"];
-```
-
-Code điều chỉnh:
-
-```
-void filter(){
-  JsonDocument doc;
-  AW_line.toCharArray(txt, AW_line.length() + 1);
-  deserializeJson(doc, txt);
-  float temp_max_1 = doc["DailyForecasts"] [0] ["Temperature"] ["Maximum"] ["Value"];
-  float temp_min_1 = doc["DailyForecasts"] [0] ["Temperature"] ["Minimum"] ["Value"];
-  String weather_day = doc["DailyForecasts"] [0] ["Day"] ["IconPhrase"];
-  String weather_night = doc["DailyForecasts"] [0] ["Night"] ["IconPhrase"];
-```
-
-+ Kết quả sau khi điều chỉnh và chạy thử:
-
-![ảnh](Screenshot.png)
+![ảnh](anh2.jpg)
 
 ## Công việc tiếp theo:
 
