@@ -7,7 +7,6 @@ Tên đề tài: " Nghiên cứu, thiết kế giao diện người dùng dựa 
 
 1. Cách hoạt động của telegram chat bot.
 
-
 + Theo em hiểu chatbot là một chương trình máy tính tương tác với người dùng bằng ngôn ngữ tự nhiên dưới một giao diện đơn giản, âm thanh hoặc dưới dạng tin nhắn.
 
 + Về cách hoạt động của chatbot có hình ảnh minh họa sau:
@@ -46,13 +45,13 @@ Hàm sửa ảnh sẽ sử dụng phương thức editMessageMedia cung cấp b�
 
 Sau khi tìm hiểu về giao diện người dùng và telegram chatbot, em có ý tưởng là: 
 
-Tạo ra một giao diện trên Telegram dựa theo hướng của anh Danh đã làm là gửi và chỉnh sửa ảnh, nhưng sẽ cải thiện bằng cách bổ sung thêm những phần để tương tác nữa.
+Tạo ra một giao diện trên Telegram dựa theo hướng của anh Danh đã làm là gửi và chỉnh sửa ảnh, nhưng sẽ cải thiện bằng cách bổ sung thêm những phần tương tác nữa.
 
 + Theo ý tưởng của em, em sẽ tạo ra một giao diện dựa trên sơ đồ sau:
 
 ![ảnh](anh2.jpg)
 
-Với phần ảnh sẽ dựa theo phần anh Danh đã hòan thiện, nhưng em dự tính thêm phần nhiệt độ ngoài trời vào.
+Với phần ảnh sẽ dựa theo phần anh Danh đã hòan thiện, và em dự tính thêm phần nhiệt độ ngoài trời vào thay cho phần độ ẩm.
 
 Còn các nút bấm em sẽ sử dụng thư viện UniversalTelegramBot để khởi tạo thêm và liên kết được với phần trên, sao cho các nút bấm sẽ luôn ở bên dưới ảnh.
 
@@ -62,4 +61,4 @@ Còn các nút bấm em sẽ sử dụng thư viện UniversalTelegramBot để 
 
 ## Công việc tiếp theo:
 
-+ Cho em xin ý kiến từ thầy ạ.
++ Em xin ý kiến từ phía thầy ạ.
