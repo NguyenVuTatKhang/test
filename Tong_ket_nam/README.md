@@ -1,0 +1,1 @@
+# Trang này dùng để tổng hợp hết năm.
